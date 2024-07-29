@@ -6,16 +6,16 @@ This repository contains a Recurrent Neural Network (RNN) implementation from sc
 
 ## Implementation Details
 
-- **Forward Pass**: Computes hidden states and outputs for each time step in the sequence.
-- **Backward Pass**: Implements backpropagation through time to compute gradients and update weights.
-- **Training**: Uses gradient descent to minimize cross-entropy loss.
-- **Sampling**: Generates sequences by sampling from the model’s output probabilities.
+- **Forward Pass**: Calculates hidden states using the current input and previous hidden state. Outputs are generated using a softmax layer.
+- **Backward Pass**: Computes gradients for weights and biases using backpropagation through time (BPTT). Gradients are clipped to avoid exploding values.
+- **Training**: Adjusts weights using gradient descent to minimize cross-entropy loss. Training continues until the loss is below a threshold or a maximum number of iterations is reached.
+- **Sampling**: Generates a sequence of words by sampling from the model’s output probabilities.
 
 ## References
 
 - [Recurrent Neural Networks (RNNs)](https://towardsdatascience.com/recurrent-neural-networks-rnns-3f06d7653a85)
 - [Minimal character-level language model with a Vanilla Recurrent Neural Network](https://gist.github.com/karpathy/d4dee566867f8291f086)
-- [Recurrent Neural Network Forward Propogation With Time](https://www.youtube.com/watch?v=u8utlK_c5C8)
+- [Recurrent Neural Network Forward Propagation With Time](https://www.youtube.com/watch?v=u8utlK_c5C8)
 - [Various Weight Initialization Techniques in Neural Network](https://www.youtube.com/watch?v=tMjdQLylyGI)
 
 
